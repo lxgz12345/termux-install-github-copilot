@@ -26,13 +26,13 @@ GitHub Copilot CLI (`@github/copilot`) 依赖两个原生组件：
 | Termux | Google Play 版 `googleplay.2026.02.11` |
 | 架构 | Android ARM64 |
 
-> ⚠️ 注意：[Termux 官方](https://termux.dev/) 推荐使用 F-Droid 版本，Google Play 版本可能存在功能限制。本脚本已在 Google Play 版本上验证可用。
+> ⚠️ 推荐使用 Termux Google Play 版本 `googleplay.2026.02.11`，其他版本的兼容性无法保证。
 
 ---
 
 ## 前置要求
 
-- Android 设备，已安装 Termux（Google Play 版 `googleplay.2026.02.11` 或更高）
+- Android 设备，已安装 Termux（**推荐** Google Play 版 `googleplay.2026.02.11`）
 - 可用的网络连接
 - GitHub 账号（用于后续登录 Copilot CLI）
 
