@@ -162,4 +162,8 @@ echo -e "${GREEN}${BOLD}║  pty.node 已部署至 prebuilds/android-arm64      
 echo -e "${GREEN}${BOLD}║  请重启 Copilot CLI 以启用 bash 工具             ║${NC}"
 echo -e "${GREEN}${BOLD}╚══════════════════════════════════════════════════╝${NC}"
 echo ""
+echo -e "${YELLOW}${BOLD}⚠️  注意：每次执行 npm install -g @github/copilot 或 npm update -g${NC}"
+echo -e "${YELLOW}${BOLD}    后，本脚本部署的 android-arm64 目录会被 npm 覆盖删除，${NC}"
+echo -e "${YELLOW}${BOLD}    届时需要重新运行 ./build-pty.sh 才能恢复 bash/grep/glob 工具。${NC}"
+echo ""
 ls -lh "$TARGET_DIR/pty.node"

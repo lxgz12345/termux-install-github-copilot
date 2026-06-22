@@ -85,6 +85,24 @@ $PREFIX/lib/node_modules/@github/copilot/
 
 ---
 
+## ⚠️ 重要提醒：升级 Copilot 后必须重跑本脚本
+
+每次执行以下任一操作后，`@github/copilot` 的包目录会被 npm 完全覆盖，本脚本部署的 `prebuilds/android-arm64/pty.node` 和 `ripgrep/bin/android-arm64/rg` 软链接都会被删除，导致 `bash` / `grep` / `glob` 工具再次失效：
+
+- `npm install -g @github/copilot`（重装或升级版本）
+- `npm update -g`
+- 其他覆盖该包目录的操作
+
+**解决方法**：每次升级 Copilot CLI 后，重新运行一次：
+
+```bash
+./build-pty.sh
+```
+
+由于 node-gyp 头文件和 node-pty 源码已被缓存，重跑会非常快。
+
+---
+
 ## 常见问题
 
 **Q: 脚本报错"无法找到 common.gypi"**  
